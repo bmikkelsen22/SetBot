@@ -1,0 +1,13 @@
+// <1|2|3> <d|o|s> <e|s|f>
+
+1 s s
+2 s f
+3 s s
+2 s s
+1 d e
+3 s e
+2 o f
+1 s e
+3 d e
+2 d s
+3 s f
