@@ -1,4 +1,4 @@
-import { Card, Shade, Shape } from './card';
+import { Card, Shade, Shape, Color } from './card';
 
 export class Game {
     cards: Card[];
@@ -22,6 +22,7 @@ export class Game {
             return this.countsValid(set.map(c => c.count)) 
                 && this.shadesValid(set.map(c => c.shade))
                 && this.shapesValid(set.map(c => c.shape))
+                && this.colorsValid(set.map(c => c.color))
                 && containsSet;
         }
         return false;
@@ -67,6 +68,17 @@ export class Game {
             if (shapes.indexOf(Shape.diamond) === -1) { return false; }
             if (shapes.indexOf(Shape.oval) === -1) { return false; }
             if (shapes.indexOf(Shape.squiggle) === -1) { return false; }
+        }
+        return true;
+    }
+
+    private colorsValid(colors: Color[]) {
+        if (colors[0] === colors[1] && colors[1] === colors[2]) {
+            return true;
+        } else {
+            if (colors.indexOf(Color.green) === -1) { return false; }
+            if (colors.indexOf(Color.purple) === -1) { return false; }
+            if (colors.indexOf(Color.red) === -1) { return false; }
         }
         return true;
     }
