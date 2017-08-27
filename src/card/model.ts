@@ -16,6 +16,41 @@ export enum Color {
     green
 }
 
+export class CardExtensions {
+    static fromColor(color: Color) {
+        switch (color) {
+            case Color.green: { return 'green'; }
+            case Color.red: { return 'red'; }
+            case Color.purple: { return 'purple'; }
+        }
+    }
+
+    static getSvgFile(card: Card) {
+        let fileName = card.count.toString();
+        
+        switch (card.shade) {
+            case Shade.empty: { fileName += 'o'; break; }
+            case Shade.shaded: { fileName += 'h'; break; }
+            case Shade.full: { fileName += 's'; break; }   
+        }
+
+        switch (card.color) {
+            case Color.green: { fileName += 'g'; break; }
+            case Color.red: { fileName += 'r'; break; }
+            case Color.purple: { fileName += 'p'; break; }
+        }
+
+        switch (card.shape) {
+            case Shape.diamond: { fileName += 'd'; break; }
+            case Shape.oval: { fileName += 'p'; break; }
+            case Shape.squiggle: { fileName += 's'; break; }
+        }
+
+        fileName += '.svg';
+        return fileName;
+    }
+}
+
 export class Card {
     count: number;
     shape: Shape;
