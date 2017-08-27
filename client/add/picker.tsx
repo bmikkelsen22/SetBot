@@ -27,7 +27,7 @@ export class Component extends React.Component<Props, State> {
     }
 
     renderOption = (index: number) => {
-        let cls = 'options';
+        let cls = 'option';
         if (this.state.selected === index) {
             cls += ' selected-option';
         }
