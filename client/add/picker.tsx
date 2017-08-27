@@ -19,7 +19,7 @@ export class Component extends React.Component<Props, State> {
         };
     }
 
-    onOptionClick(index) {
+    onOptionClick(index: number) {
         const newState = {
             selected: index
         }
@@ -45,6 +45,7 @@ export class Component extends React.Component<Props, State> {
                 <div className='picker-header'>
                     {this.props.header}
                 </div>
+                {optionsJsx}
             </div>
         );
     }

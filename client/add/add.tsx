@@ -61,6 +61,24 @@ export class Component extends React.Component<undefined, State> {
         });
     }
 
+    onSelectShape = (index: number) => {
+        this.setState({
+            shape: this.options.shapes[index].value as Shape
+        });
+    }
+
+    onSelectShade = (index: number) => {
+        this.setState({
+            shade: this.options.shades[index].value as Shade
+        });
+    }
+
+    onSelectCount = (index: number) => {
+        this.setState({
+            count: this.options.counts[index].value as number
+        });
+    }
+
     render() {
         return (
             <div className='add-container'>
@@ -68,6 +86,18 @@ export class Component extends React.Component<undefined, State> {
                     header='Color'
                     options={this.options.colors.map(c => c.name)}
                     onSelect={this.onSelectColor} />
+                <Picker.Component 
+                    header='Number'
+                    options={this.options.counts.map(c => c.name)}
+                    onSelect={this.onSelectCount} />
+                <Picker.Component 
+                    header='Shape'
+                    options={this.options.shapes.map(s => s.name)}
+                    onSelect={this.onSelectShape} />
+                <Picker.Component 
+                    header='Shade'
+                    options={this.options.shades.map(s => s.name)}
+                    onSelect={this.onSelectShade} />
             </div>
         );
     }
