@@ -8,28 +8,35 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .picker {
-    width: 300px;
+    /* flex: 1 0 250px; */
+    min-width: 250px;
     box-shadow: 0px 0px 20px #ccc;
     border-radius: 3px;
     margin: 7px;
+    padding: 10px;
 }
 
 .picker-header {
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #666;
+    color: #aaa;
+    padding-bottom: 10px;
 }
 
 .option {
     display: inline-block;
-    padding: 5px;
+    padding: 5px 10px;
     color: #333;
-    background-color: #ccc;
+    background-color: #ddd;
+    margin: 3px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .selected-option {
-    background-color: #aaa;
+    background-color: #bbb;
 }
