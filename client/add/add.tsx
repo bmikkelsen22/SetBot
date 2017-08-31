@@ -1,6 +1,6 @@
 import * as React from 'react';
-import * as Picker from './picker';
-import * as Container from '../container';
+import { Picker } from './picker';
+import { Container } from '../container';
 import { Color, Card, Shade, Shape } from '../card/model';
 
 interface Props {
@@ -19,7 +19,7 @@ function nv(name: string, value: any): NameValue {
     }
 }
 
-export class Component extends React.Component<Props, Card> {
+export class AddCard extends React.Component<Props, Card> {
     options = {
         colors: [
             nv('Green', Color.green), 
@@ -80,26 +80,26 @@ export class Component extends React.Component<Props, Card> {
     render() {
         return (
             <div className='add-container'>
-                <Container.Component header='Color'>
-                    <Picker.Component
+                <Container header='Color'>
+                    <Picker
                         options={this.options.colors.map(c => c.name)}
                         onSelect={this.onSelectColor} />
-                </Container.Component>
-                <Container.Component header='Number'>
-                    <Picker.Component 
+                </Container>
+                <Container header='Number'>
+                    <Picker 
                         options={this.options.counts.map(c => c.name)}
                         onSelect={this.onSelectCount} />
-                </Container.Component>
-                <Container.Component header='Shape'>
-                    <Picker.Component 
+                </Container>
+                <Container header='Shape'>
+                    <Picker 
                         options={this.options.shapes.map(s => s.name)}
                         onSelect={this.onSelectShape} />
-                </Container.Component>
-                <Container.Component header='Shape'>
-                    <Picker.Component 
+                </Container>
+                <Container header='Shape'>
+                    <Picker 
                         options={this.options.shades.map(s => s.name)}
                         onSelect={this.onSelectShade} />
-                </Container.Component>
+                </Container>
                 <button className='add-button' onClick={() => this.props.onAddCard(this.state)}>Add card</button>
             </div>
         );

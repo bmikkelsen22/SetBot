@@ -10,7 +10,7 @@ interface State {
     selected: number;
 }
 
-export class Component extends React.Component<Props, State> {
+export class Picker extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {

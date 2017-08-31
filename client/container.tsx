@@ -4,7 +4,7 @@ interface Props {
     header: string;
 }
 
-export class Component extends React.Component<Props, undefined> {
+export class Container extends React.Component<Props, undefined> {
     render() {
         return (
             <div className='container'>
