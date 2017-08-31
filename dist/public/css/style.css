@@ -4,6 +4,21 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#main-page {
+    padding: 20px;
+}
+
+.flex-wrap-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-header {
+    font-size: 20px;
+    color: #aaa;
+}
+
 .add-container {
     display: flex;
     flex-direction: row;
@@ -39,4 +54,10 @@ body {
 
 .selected-option {
     background-color: #bbb;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

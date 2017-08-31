@@ -2,11 +2,8 @@ import * as React from 'react';
 import * as Picker from './picker';
 import { Color, Card, Shade, Shape } from '../card/model';
 
-interface State {
-    color: Color;
-    count: number;
-    shade: Shade;
-    shape: Shape;
+interface Props {
+    onAddCard: (card: Card) => void;
 }
 
 interface NameValue {
@@ -21,7 +18,7 @@ function nv(name: string, value: any): NameValue {
     }
 }
 
-export class Component extends React.Component<undefined, State> {
+export class Component extends React.Component<Props, Card> {
     options = {
         colors: [
             nv('Green', Color.green), 
@@ -98,6 +95,7 @@ export class Component extends React.Component<undefined, State> {
                     header='Shade'
                     options={this.options.shades.map(s => s.name)}
                     onSelect={this.onSelectShade} />
+                <button className='add-button' onClick={() => this.props.onAddCard(this.state)}>Add card</button>
             </div>
         );
     }
