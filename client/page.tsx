@@ -9,7 +9,6 @@ export class Component extends React.Component<undefined, undefined> {
         return (
             <div id='main-page' className='flex-wrap-container'>
                 <Add.Component onAddCard={(card) => alert(card)}/>
-                <Add.Component onAddCard={(card) => alert(card)}/>
                 
             </div>
         );

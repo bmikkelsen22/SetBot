@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Color, CardExtensions } from '../card/model';
 
 interface Props {
-    header: string;
     options: string[];
     onSelect: (index: number) => void;
 }
@@ -42,9 +41,6 @@ export class Component extends React.Component<Props, State> {
         let optionsJsx = this.props.options.map((o, i) => this.renderOption(i))
         return (
             <div className='picker'>
-                <div className='picker-header'>
-                    {this.props.header}
-                </div>
                 {optionsJsx}
             </div>
         );

@@ -27,15 +27,17 @@ body {
 }
 
 .picker {
-    /* flex: 1 0 250px; */
     min-width: 250px;
+}
+
+.container {
     box-shadow: 0px 0px 20px #ccc;
     border-radius: 3px;
     margin: 7px;
     padding: 10px;
 }
 
-.picker-header {
+.container-header {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #aaa;

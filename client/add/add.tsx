@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as Picker from './picker';
+import * as Container from '../container';
 import { Color, Card, Shade, Shape } from '../card/model';
 
 interface Props {
@@ -79,22 +80,26 @@ export class Component extends React.Component<Props, Card> {
     render() {
         return (
             <div className='add-container'>
-                <Picker.Component 
-                    header='Color'
-                    options={this.options.colors.map(c => c.name)}
-                    onSelect={this.onSelectColor} />
-                <Picker.Component 
-                    header='Number'
-                    options={this.options.counts.map(c => c.name)}
-                    onSelect={this.onSelectCount} />
-                <Picker.Component 
-                    header='Shape'
-                    options={this.options.shapes.map(s => s.name)}
-                    onSelect={this.onSelectShape} />
-                <Picker.Component 
-                    header='Shade'
-                    options={this.options.shades.map(s => s.name)}
-                    onSelect={this.onSelectShade} />
+                <Container.Component header='Color'>
+                    <Picker.Component
+                        options={this.options.colors.map(c => c.name)}
+                        onSelect={this.onSelectColor} />
+                </Container.Component>
+                <Container.Component header='Number'>
+                    <Picker.Component 
+                        options={this.options.counts.map(c => c.name)}
+                        onSelect={this.onSelectCount} />
+                </Container.Component>
+                <Container.Component header='Shape'>
+                    <Picker.Component 
+                        options={this.options.shapes.map(s => s.name)}
+                        onSelect={this.onSelectShape} />
+                </Container.Component>
+                <Container.Component header='Shape'>
+                    <Picker.Component 
+                        options={this.options.shades.map(s => s.name)}
+                        onSelect={this.onSelectShade} />
+                </Container.Component>
                 <button className='add-button' onClick={() => this.props.onAddCard(this.state)}>Add card</button>
             </div>
         );
