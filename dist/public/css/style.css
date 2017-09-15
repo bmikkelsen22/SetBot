@@ -44,6 +44,7 @@ body {
     text-transform: uppercase;
     color: #aaa;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .option {
@@ -80,4 +81,12 @@ body {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+a {
+    color: #5191FF;
+}
+
+.help {
+    text-align: left;
 }

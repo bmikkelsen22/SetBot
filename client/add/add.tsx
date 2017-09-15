@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Picker } from './picker';
 import { Container } from '../container';
 import { Color, Card, Shade, Shape } from '../card/model';
+import { Help } from "./help";
 
 interface Props {
     onAddCard: (card: Card) => void;
@@ -12,6 +13,10 @@ interface NameValue {
     value: any;
 }
 
+interface State {
+    showHelp: boolean;
+}
+
 function nv(name: string, value: any): NameValue {
     return {
         name: name,
@@ -19,7 +24,7 @@ function nv(name: string, value: any): NameValue {
     }
 }
 
-export class AddCard extends React.Component<Props, Card> {
+export class AddCard extends React.Component<Props, Card & State> {
     options = {
         colors: [
             nv('Green', Color.green), 
@@ -49,7 +54,8 @@ export class AddCard extends React.Component<Props, Card> {
             color: this.options.colors[0].value as Color,
             count: this.options.counts[0].value as number,
             shade: this.options.shades[0].value as Shade,
-            shape: this.options.shapes[0].value as Shape
+            shape: this.options.shapes[0].value as Shape,
+            showHelp: false
         }
     }
 
@@ -74,6 +80,12 @@ export class AddCard extends React.Component<Props, Card> {
     onSelectCount = (index: number) => {
         this.setState({
             count: this.options.counts[index].value as number
+        });
+    }
+
+    toggleHelpShown = (show: boolean) => {
+        this.setState({
+            showHelp: show
         });
     }
 
@@ -103,6 +115,7 @@ export class AddCard extends React.Component<Props, Card> {
                     </Container>
                 </div>
                 <div className='add-button-container'>
+                    <Help showHelp={this.state.showHelp} toggleShown={this.toggleHelpShown} />
                     <button className='add-button' onClick={() => this.props.onAddCard(this.state)}>Add card</button>
                 </div>
             </div>
