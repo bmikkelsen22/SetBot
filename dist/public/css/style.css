@@ -4,14 +4,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#main-page {
-    padding: 20px;
+#main-element {
+    text-align: center;
 }
 
-.flex-wrap-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+#main-page {
+    padding: 20px 0;
+    display: inline-block;
+}
+
+#add-container-wrapper {
+    display: inline-grid;
 }
 
 .section-header {
@@ -59,7 +62,16 @@ body {
 }
 
 .add-button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    padding: 7px 15px;
+    color: white;
+    background-color: #5191FF;
+    margin: 7px;
+    border-radius: 3px;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.add-button-container {
+    text-align: right;
 }
