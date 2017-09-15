@@ -8,7 +8,7 @@ interface Props {
     title: string;
 }
 
-export class CardGroup extends React.Component<Props, undefined> {
+export class CardGroupSet extends React.Component<Props, undefined> {
     render() {
         const cardsJsx = this.props.cards.map((card, idx) => 
             <CardComponent key={idx} card={card} height={105} width={67.5}/>
