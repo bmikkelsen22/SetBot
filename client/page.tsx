@@ -37,11 +37,14 @@ export class Page extends React.Component<undefined, State> {
     }
 
     render() {
+        const allCardsTsx = this.state.cards.length === 0
+            ? undefined
+            : <CardGroupAll cards={this.state.cards} cardClicked={this.removeCard} />;
         return (
             <div id='main-page'>
                 <h2>Set Bot</h2>
                 <AddCard onAddCard={this.addCard}/>
-                <CardGroupAll cards={this.state.cards} cardClicked={this.removeCard} />
+                {allCardsTsx}
                 <Sets cards={this.state.cards} />
             </div>
         );

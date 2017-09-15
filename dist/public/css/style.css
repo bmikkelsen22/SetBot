@@ -51,14 +51,14 @@ body {
     display: inline-block;
     padding: 5px 10px;
     color: #333;
-    background-color: #ddd;
+    background-color: #eee;
     margin: 3px;
     border-radius: 3px;
     cursor: pointer;
 }
 
 .selected-option {
-    background-color: #bbb;
+    background-color: #ccc;
 }
 
 .add-button {
