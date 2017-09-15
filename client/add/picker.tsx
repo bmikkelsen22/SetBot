@@ -23,6 +23,7 @@ export class Picker extends React.Component<Props, State> {
             selected: index
         }
         this.setState(newState);
+        this.props.onSelect(index);
     }
 
     renderOption = (index: number) => {

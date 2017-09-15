@@ -10,8 +10,8 @@ interface Props {
 
 export class CardGroup extends React.Component<Props, undefined> {
     render() {
-        const cardsJsx = this.props.cards.map(card => 
-            <CardComponent card={card} height={70} width={75}/>
+        const cardsJsx = this.props.cards.map((card, idx) => 
+            <CardComponent key={idx} card={card} height={105} width={67.5}/>
         );
 
         return (
