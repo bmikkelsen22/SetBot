@@ -38,7 +38,8 @@ export class Page extends React.Component<undefined, State> {
 
     render() {
         return (
-            <div id='main-page' className='flex-wrap-container'>
+            <div id='main-page'>
+                <h2>Set Bot</h2>
                 <AddCard onAddCard={this.addCard}/>
                 <CardGroupAll cards={this.state.cards} cardClicked={this.removeCard} />
                 <Sets cards={this.state.cards} />
