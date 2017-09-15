@@ -1,5 +1,5 @@
 import { Game } from './game';
-import { Card } from './card';
+import { Card } from "../card/model";
 
 export class Bot {
     private game: Game;

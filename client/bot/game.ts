@@ -1,4 +1,4 @@
-import { Card, Shade, Shape, Color } from './card';
+import { Card, Shade, Shape, Color } from '../card/model';
 
 export class Game {
     cards: Card[];

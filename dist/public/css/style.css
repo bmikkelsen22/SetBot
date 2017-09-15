@@ -10,7 +10,6 @@ body {
 
 #main-page {
     padding: 20px 0;
-    display: inline-block;
 }
 
 #add-container-wrapper {
@@ -74,4 +73,11 @@ body {
 
 .add-button-container {
     text-align: right;
+}
+
+.sets-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
