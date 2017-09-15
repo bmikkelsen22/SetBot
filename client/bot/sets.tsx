@@ -21,8 +21,7 @@ export class Sets extends React.Component<Props, undefined> {
     render() {
         this.game.cards = this.props.cards;
         const sets = this.bot.findSets();
-        const distinct = this.bot.distinctSets(sets);
-        const setsJsx = distinct.map((cardSet, index) => 
+        const setsJsx = sets.map((cardSet, index) => 
             <CardGroupSet title={'Set ' + (index + 1)} cards={cardSet} key={index}/>
         );
         return (

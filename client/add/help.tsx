@@ -16,7 +16,7 @@ export class Help extends React.Component<Props, undefined> {
                         then add it to the game by pressing the "Add card" button. 
                         You can remove cards by tapping on them in the all cards section.
                         Once you have added cards that form a set, the set will appear at 
-                        the bottom of the page. 
+                        the bottom of the page. Note that all possible sets are shown.
                     </p>
                     <a onClick={() => this.props.toggleShown(false)}>Close</a>
                 </div>
