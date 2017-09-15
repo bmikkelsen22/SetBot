@@ -29,9 +29,9 @@ export class CardExtensions {
         let fileName = card.count.toString();
         
         switch (card.shade) {
-            case Shade.empty: { fileName += 'o'; break; }
-            case Shade.shaded: { fileName += 'h'; break; }
-            case Shade.full: { fileName += 's'; break; }   
+            case Shade.empty: { fileName += 'O'; break; }
+            case Shade.shaded: { fileName += 'H'; break; }
+            case Shade.full: { fileName += 'S'; break; }   
         }
 
         switch (card.color) {
@@ -41,9 +41,9 @@ export class CardExtensions {
         }
 
         switch (card.shape) {
-            case Shape.diamond: { fileName += 'd'; break; }
-            case Shape.oval: { fileName += 'p'; break; }
-            case Shape.squiggle: { fileName += 's'; break; }
+            case Shape.diamond: { fileName += 'D'; break; }
+            case Shape.oval: { fileName += 'P'; break; }
+            case Shape.squiggle: { fileName += 'S'; break; }
         }
 
         fileName += '.svg';
