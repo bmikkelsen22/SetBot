@@ -33,7 +33,7 @@ export class Bot {
         return distinct;
     }
 
-    //From: https://gist.github.com/axelpale/3118596
+    //From: https://gist.github.com/axelpale/3118596 (thanks!)
     private k_combinations(set: any[], k: number): any[][] {
         var i, j, combs, head, tailcombs;
         

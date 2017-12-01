@@ -746,7 +746,7 @@ var Bot = (function () {
         });
         return distinct;
     };
-    //From: https://gist.github.com/axelpale/3118596
+    //From: https://gist.github.com/axelpale/3118596 (thanks!)
     Bot.prototype.k_combinations = function (set, k) {
         var i, j, combs, head, tailcombs;
         // There is no way to take e.g. sets of 5 elements from

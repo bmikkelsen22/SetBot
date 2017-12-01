@@ -10,7 +10,8 @@
             "args": [
                 "run",
                 "build"
-            ]
+            ],
+            "problemMatcher": []
         }
     ]
 }
