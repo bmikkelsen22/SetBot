@@ -42,7 +42,12 @@ export class Page extends React.Component<undefined, State> {
             : <CardGroupAll cards={this.state.cards} cardClicked={this.removeCard} />;
         return (
             <div id='main-page'>
-                <h2>Set Bot</h2>
+                <h2>
+                    Set Bot
+                    <a href="https://github.com/bmikkelsen22/SetBot">
+                        <img src="/public/icons/github.png" />
+                    </a>
+                </h2>
                 <AddCard onAddCard={this.addCard}/>
                 {allCardsTsx}
                 <Sets cards={this.state.cards} />
