@@ -43,9 +43,9 @@ export class Page extends React.Component<undefined, State> {
         return (
             <div id='main-page'>
                 <h2>
-                    Set Bot 
+                    Set Bot {" "}
                     <a href="https://github.com/bmikkelsen22/SetBot">
-                        <img src="/public/icons/github.png" />
+                        <img src="public/icons/github.png" style={{height: "1em"}}/>
                     </a>
                 </h2>
                 <AddCard onAddCard={this.addCard}/>

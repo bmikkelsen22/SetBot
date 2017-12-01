@@ -12,7 +12,7 @@ export class Help extends React.Component<Props, undefined> {
             <Container header="Help">
                 <div className='help'>
                     <p>
-                        This tool was built to recognize sets in the game 
+                        This tool was built to recognize sets in the game {" "}
                         <a href="https://en.wikipedia.org/wiki/Set_(game)">Set</a>.
                     </p>
                     <p>

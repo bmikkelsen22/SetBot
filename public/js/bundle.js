@@ -332,9 +332,10 @@ var Page = (function (_super) {
             : React.createElement(card_group_all_1.CardGroupAll, { cards: this.state.cards, cardClicked: this.removeCard });
         return (React.createElement("div", { id: 'main-page' },
             React.createElement("h2", null,
-                "Set Bot",
+                "Set Bot ",
+                " ",
                 React.createElement("a", { href: "https://github.com/bmikkelsen22/SetBot" },
-                    React.createElement("img", { src: "/public/icons/github.png" }))),
+                    React.createElement("img", { src: "public/icons/github.png", style: { height: "1em" } }))),
             React.createElement(add_1.AddCard, { onAddCard: this.addCard }),
             allCardsTsx,
             React.createElement(sets_1.Sets, { cards: this.state.cards })));
@@ -541,7 +542,8 @@ var Help = (function (_super) {
         return (React.createElement(container_1.Container, { header: "Help" },
             React.createElement("div", { className: 'help' },
                 React.createElement("p", null,
-                    "This tool was built to recognize sets in the game",
+                    "This tool was built to recognize sets in the game ",
+                    " ",
                     React.createElement("a", { href: "https://en.wikipedia.org/wiki/Set_(game)" }, "Set"),
                     "."),
                 React.createElement("p", null, "Start by selecting a color, number, shape, and shade for the card, then add it to the game by pressing the \"Add card\" button. You can remove cards by tapping on them in the all cards section. Once you have added cards that form a set, the set will appear at the bottom of the page. Note that all possible sets are shown."),
