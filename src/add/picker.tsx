@@ -27,7 +27,7 @@ export class Picker extends React.Component<Props, State> {
     }
 
     renderOption = (index: number) => {
-        let cls = 'option';
+        let cls = 'option clickable';
         if (this.state.selected === index) {
             cls += ' selected-option';
         }

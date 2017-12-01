@@ -54,6 +54,9 @@ body {
     background-color: #eee;
     margin: 3px;
     border-radius: 3px;
+}
+
+.clickable {
     cursor: pointer;
 }
 

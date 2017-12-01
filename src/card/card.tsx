@@ -15,6 +15,7 @@ export class CardComponent extends React.Component<Props, undefined> {
         if (this.props.onClick) {
             jsx = (
                 <img src={file} 
+                    className="clickable" 
                     height={this.props.height} 
                     width={this.props.width} 
                     onClick={() => this.props.onClick(this.props.card)}/>

@@ -116,7 +116,7 @@ export class AddCard extends React.Component<Props, Card & State> {
                 </div>
                 <div className='add-button-container'>
                     <Help showHelp={this.state.showHelp} toggleShown={this.toggleHelpShown} />
-                    <button className='add-button' onClick={() => this.props.onAddCard(this.state)}>Add card</button>
+                    <button className='clickable add-button' onClick={() => this.props.onAddCard(this.state)}>Add card</button>
                 </div>
             </div>
         );

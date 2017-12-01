@@ -269,7 +269,7 @@ var CardComponent = (function (_super) {
         var file = 'public/icons/' + model_1.CardExtensions.getSvgFile(this.props.card);
         var jsx;
         if (this.props.onClick) {
-            jsx = (React.createElement("img", { src: file, height: this.props.height, width: this.props.width, onClick: function () { return _this.props.onClick(_this.props.card); } }));
+            jsx = (React.createElement("img", { src: file, className: "clickable", height: this.props.height, width: this.props.width, onClick: function () { return _this.props.onClick(_this.props.card); } }));
         }
         else {
             jsx = (React.createElement("img", { src: file, height: this.props.height, width: this.props.width }));
@@ -451,7 +451,7 @@ var AddCard = (function (_super) {
                     React.createElement(picker_1.Picker, { options: this.options.shades.map(function (s) { return s.name; }), onSelect: this.onSelectShade }))),
             React.createElement("div", { className: 'add-button-container' },
                 React.createElement(help_1.Help, { showHelp: this.state.showHelp, toggleShown: this.toggleHelpShown }),
-                React.createElement("button", { className: 'add-button', onClick: function () { return _this.props.onAddCard(_this.state); } }, "Add card"))));
+                React.createElement("button", { className: 'clickable add-button', onClick: function () { return _this.props.onAddCard(_this.state); } }, "Add card"))));
     };
     return AddCard;
 }(React.Component));
@@ -481,7 +481,7 @@ var Picker = (function (_super) {
     function Picker(props) {
         var _this = _super.call(this, props) || this;
         _this.renderOption = function (index) {
-            var cls = 'option';
+            var cls = 'option clickable';
             if (_this.state.selected === index) {
                 cls += ' selected-option';
             }
@@ -537,8 +537,12 @@ var Help = (function (_super) {
         var _this = this;
         return (React.createElement(container_1.Container, { header: "Help" },
             React.createElement("div", { className: 'help' },
-                React.createElement("p", null, "Start by selecting a color, number, and shape for the card, then add it to the game by pressing the \"Add card\" button. You can remove cards by tapping on them in the all cards section. Once you have added cards that form a set, the set will appear at the bottom of the page. Note that all possible sets are shown."),
-                React.createElement("a", { onClick: function () { return _this.props.toggleShown(false); } }, "Close"))));
+                React.createElement("p", null,
+                    "This tool was built to recognize sets in the game",
+                    React.createElement("a", { href: "https://en.wikipedia.org/wiki/Set_(game)" }, "Set"),
+                    "."),
+                React.createElement("p", null, "Start by selecting a color, number, shape, and shade for the card, then add it to the game by pressing the \"Add card\" button. You can remove cards by tapping on them in the all cards section. Once you have added cards that form a set, the set will appear at the bottom of the page. Note that all possible sets are shown."),
+                React.createElement("a", { className: "clickable", onClick: function () { return _this.props.toggleShown(false); } }, "Close"))));
     };
     Help.prototype.render = function () {
         var _this = this;
@@ -546,7 +550,7 @@ var Help = (function (_super) {
             return this.renderMessage();
         }
         else {
-            return (React.createElement("a", { onClick: function () { return _this.props.toggleShown(true); } }, "Help"));
+            return (React.createElement("a", { className: "clickable", onClick: function () { return _this.props.toggleShown(true); } }, "Help"));
         }
     };
     return Help;
