@@ -266,7 +266,7 @@ var CardComponent = (function (_super) {
     }
     CardComponent.prototype.render = function () {
         var _this = this;
-        var file = 'icons/' + model_1.CardExtensions.getSvgFile(this.props.card);
+        var file = 'public/icons/' + model_1.CardExtensions.getSvgFile(this.props.card);
         var jsx;
         if (this.props.onClick) {
             jsx = (React.createElement("img", { src: file, height: this.props.height, width: this.props.width, onClick: function () { return _this.props.onClick(_this.props.card); } }));
