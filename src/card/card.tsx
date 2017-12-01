@@ -10,7 +10,7 @@ interface Props {
 
 export class CardComponent extends React.Component<Props, undefined> {
     render() {
-        const file = 'icons/' + CardExtensions.getSvgFile(this.props.card);
+        const file = 'public/icons/' + CardExtensions.getSvgFile(this.props.card);
         let jsx: JSX.Element;
         if (this.props.onClick) {
             jsx = (
