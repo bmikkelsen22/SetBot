@@ -43,7 +43,7 @@ export class Page extends React.Component<undefined, State> {
         return (
             <div id='main-page'>
                 <h2>
-                    Set Bot
+                    Set Bot 
                     <a href="https://github.com/bmikkelsen22/SetBot">
                         <img src="/public/icons/github.png" />
                     </a>

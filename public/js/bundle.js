@@ -331,7 +331,10 @@ var Page = (function (_super) {
             ? undefined
             : React.createElement(card_group_all_1.CardGroupAll, { cards: this.state.cards, cardClicked: this.removeCard });
         return (React.createElement("div", { id: 'main-page' },
-            React.createElement("h2", null, "Set Bot"),
+            React.createElement("h2", null,
+                "Set Bot",
+                React.createElement("a", { href: "https://github.com/bmikkelsen22/SetBot" },
+                    React.createElement("img", { src: "/public/icons/github.png" }))),
             React.createElement(add_1.AddCard, { onAddCard: this.addCard }),
             allCardsTsx,
             React.createElement(sets_1.Sets, { cards: this.state.cards })));
