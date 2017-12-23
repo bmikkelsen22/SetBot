@@ -108,7 +108,7 @@ export class AddCard extends React.Component<Props, Card & State> {
                             options={this.options.shapes.map(s => s.name)}
                             onSelect={this.onSelectShape} />
                     </Container>
-                    <Container header='Shape'>
+                    <Container header='Shade'>
                         <Picker 
                             options={this.options.shades.map(s => s.name)}
                             onSelect={this.onSelectShade} />

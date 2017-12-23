@@ -451,7 +451,7 @@ var AddCard = (function (_super) {
                     React.createElement(picker_1.Picker, { options: this.options.counts.map(function (c) { return c.name; }), onSelect: this.onSelectCount })),
                 React.createElement(container_1.Container, { header: 'Shape' },
                     React.createElement(picker_1.Picker, { options: this.options.shapes.map(function (s) { return s.name; }), onSelect: this.onSelectShape })),
-                React.createElement(container_1.Container, { header: 'Shape' },
+                React.createElement(container_1.Container, { header: 'Shade' },
                     React.createElement(picker_1.Picker, { options: this.options.shades.map(function (s) { return s.name; }), onSelect: this.onSelectShade }))),
             React.createElement("div", { className: 'add-button-container' },
                 React.createElement(help_1.Help, { showHelp: this.state.showHelp, toggleShown: this.toggleHelpShown }),
